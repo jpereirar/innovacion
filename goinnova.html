@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go! Innova - INACAP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003A5C;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero {
+      background-color: #c8102e;
+      height: 300px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: #003A5C;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #003A5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .image-row img {
+   width: 32%;
+   height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.2s;
+  }
+
+  .image-row img:hover {
+    transform: scale(1.03);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <div class="hero-text">
+      <h1>Go! Innova</h1>
+      <p>Te acompañamos en el camino de la innovación</p>
+    </div>
+  </header>
+
+
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es Go! Innova?</h2>
+        <p>Es un concurso de innovación y emprendimiento dirigido a estudiantes, exalumnos y colaboradores de INACAP, enfocado en promover soluciones creativas y fomentar una cultura innovadora.</p>
+      </div>
+      <img src="img/Goinnova_Todos.png" alt="Goinnova Todos">
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Descripción</h2>
+        <p>Go! Innova impulsa proyectos que abordan desafíos con impacto positivo. Fomenta creatividad, trabajo en equipo y competencias emprendedoras mediante mentoría, acompañamiento y formación.</p>
+      </div>
+      <img src="img/Goinnova1.jpg" alt="Goinnova1">
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Propósito</h2>
+        <p>Fomentar la generación de ideas y proyectos que respondan a desafíos reales, fortaleciendo el compromiso social, territorial y productivo de los estudiantes y colaboradores.</p>
+      </div>
+      <video width="100%" controls poster="">
+        <source src="video/GoinnovaCol-2024.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>  
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Objetivo</h2>
+        <p>Incentivar la participación en la creación de soluciones innovadoras y sostenibles que mejoren la calidad de vida, integrando trabajo colaborativo, creatividad y vinculación con el medio.</p>
+      </div>
+      <video controls width="100%" poster="">
+        <source src="video/GoinnovaEst-2024.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Estructura 2025</h2>
+        <ul>
+          <li><strong>Estudiantes:</strong> Desarrollo de proyectos en dos desafíos: Innovación y Emprendimiento, y Teletón.</li>
+          <li><strong>Educación Media:</strong> Ideas que respondan a desafíos reales de sus comunidades o sectores productivos.</li>
+          <li><strong>Colaboradores:</strong> Proyectos de impacto con competencias emprendedoras como agentes de cambio.</li>
+        </ul>
+      </div>
+    <!-- Contenedor para imágenes en línea -->
+    <div class="image-row">
+      <img src="img/Goinnova_Estudiantes.jpg" alt="Estudiantes">
+      <img src="img/Goinnova_Colaboradores.jpg" alt="Colaboradores">
+      <img src="img/Goinnova_Media.jpg" alt="Educación Media">
+    </div>
+  </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Cómo Participar?</h2>
+        <p>Postulación mediante formulario en la web. Consulta las fechas de apertura para cada categoría.</p>
+      </div>
+      <img src="img/Goinnova2.jpg" alt="Goinnova2">
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Fechas Clave 2025</h2>
+        <ul>
+          <li>Apertura Go! Innova: Mayo</li>
+          <li>Apertura Colaboradores: Junio</li>
+          <li>Apertura Escolares: Por definir</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Ganadores 2024</h2>
+        <iframe src="https://www.youtube.com/embed/PX2S35P1JZw" title="Goinnova Educacion Media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Contacto</h2>
+        <p><strong>Andrea Margozzini</strong><br/>Coordinadora Nacional Go! Innova<br/><a href="mailto:amargozzini@inacap.cl">amargozzini@inacap.cl</a></p>
+      </div>
+      <a href="https://www.instagram.com/inacap_oficial/reel/DAqY0alOWLK/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+        </svg>
+        Síguenos en Instagram
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
