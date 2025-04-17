@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Función de Innovación en INACAP</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+  
+      header {
+        background-color: #003A5C;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+  
+      header img {
+        height: 50px;
+      }
+  
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+  
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+  
+      .hero {
+        background: url('img/medlog.jpg') no-repeat center center;
+        background-size: 100% auto; /* <-- cambia cover por contain */
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.5em;
+      }
+  
+      .hero p {
+        font-size: 1.2em;
+      }
+  
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+  
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .card-content {
+        padding: 20px;
+      }
+  
+      .card h2 {
+        color: #003A5C;
+      }
+  
+      .card ul {
+        padding-left: 20px;
+      }
+  
+      footer {
+        background-color: #003A5C;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .thumb {
+      width: 200px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+
+   /* Estilo del modal (ventana emergente) */
+   .overlay {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay.show {
+      display: flex;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .overlay:hover {
+      cursor: pointer;
+    }
+   </style>
+  </head>
+<body>
+    <!-- Modal para mostrar  imagen ampliada -->
+    <div class="overlay" id="imageModal" onclick="hideImage()">
+      <img id="modalImage" src="" alt="Imagen ampliada">
+    </div>
+  
+    <!-- Script para mostrar y ocultar -->
+    <script>
+      function showImage(img) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = img.src;
+        modal.classList.add("show");
+      }
+  
+      function hideImage() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("show");
+      }
+    </script>
+
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <nav>
+      <a href="#">Inicio</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Innovación en INACAP</h1>
+      <p>Transformando la educación y el desarrollo del país con soluciones innovadoras.</p>
+    </div>
+  </section>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="img/dite.jpeg" alt="DITE">
+      <div class="card-content">
+        <h2>DITE</h2>
+        <p>La Dirección de Innovación, Transferencia y Emprendimiento (DITE) lidera la estrategia institucional de innovación, apoya a las sedes y conecta la innovación con la docencia y el entorno.</p>
+      </div>
+    </div>
+
+      <div class="card">
+      <img src="img/relato.png" alt="Relato">
+      <div class="card-content">
+        <h2>Innovar para Transformar el Futuro</h2>
+        <p>En INACAP, formamos líderes capaces de transformar el futuro a través de la innovación y el emprendimiento. Nuestra educación inspira creatividad, impulsa el cambio y prepara a los estudiantes para enfrentar los desafíos con visión e integridad. Creemos en el poder de la educación para generar un impacto positivo y sostenible. Innovar es nuestra esencia: educar, servir y transformar.</p>
+          <a href="doc/Relato.pdf" target="_blank">Relato de la innovación en INACAP</a>
+        </div>
+    </div>
+
+    <div class="card">
+      <img src="img/choritos.jpg" alt="Funcion innovacion">
+      <div class="card-content">
+        <h2>¿Para qué existe la función de innovación en INACAP?</h2>
+        <p>La innovación tiene como propósito apoyar el modelo educativo institucional fortaleciendo la cultura innovadora y emprendedora, mejorando las trayectorias formativo-laborales y contribuyendo al desarrollo sostenible del país mediante la creación, adopción y transferencia de soluciones tecnológicas.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <!-- Imagen que se puede ampliar -->
+      <img src="img/procesos.png" alt="Innovación INACAP" onclick="showImage(this)">
+      
+      <div class="card-content">
+        <h2>¿Cómo se entiende la innovación en INACAP?</h2>
+        <p>Es la creación e implementación de prácticas, productos, procesos o servicios nuevos o mejorados que resuelven problemas relevantes. Debe ser:</p>
+        <ul>
+          <li>Pertinente (vinculada al entorno)</li>
+          <li>Novedosa</li>
+          <li>Generadora de valor (para formación y entorno)</li>
+        </ul>
+        <p><a href="definiciones.html">Revisa aquí las definiciones de innovación</a></p>
+      </div>
+    </div>
+  
+  
+    <div class="card">
+      <img src="img/laboratorio.png" alt="Innovacion y Modelo Educativo INACAP">
+      <div class="card-content">
+        <h2>¿Cómo se integra la innovación al modelo institucional?</h2>
+        <ul>
+          <li>Se articula con Docencia y Vinculación con el Medio.</li>
+          <li>Apoya el desarrollo del Sello i+e, clave en el perfil de egreso.</li>
+          <li>Contribuye al logro del Modelo Educativo Técnico Profesional.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/estudiantes.png" alt="Programas">
+      <div class="card-content">
+        <h2>¿Cómo se implementa en sede?</h2>
+        <p>El sello i+e del CFT INACAP se desarrolla con una base en la formación curricular (asignaturas i+e y
+          asignaturas comunes e integradora) y se fortalece con programas co-curriculares y extra-curriculares:</p>
+        <ul>
+          <li>Curricular: I+E, Modelo API</li>
+          <li>Co-curricular:
+            <ul>
+              <li><a href="fabrica.html">Fábrica 4.0</a></li>
+              <li><a href="fab.html">Red FAB</a></li>
+            </ul>
+          </li>
+          <li>Extra-curricular: 
+            <ul>
+              <li><a href="acelera.html">Programa de Aceleración</a></li>
+              <li><a href="goinnova.html">GoInnova</a></li>
+              <li><a href="creaempresas.html">Red CREA Empresas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/estrategia.png" alt="Resultados" onclick="showImage(this)">
+      <div class="card-content">
+        <h2>¿Qué se ha logrado?</h2>
+        <ul>
+          <li>970 proyectos de innovación entre 2018 y 2024.</li>
+          <li>Más de 200 proyectos en Fábrica 4.0.</li>
+          <li>24 soluciones transferidas vía Fondo de Aceleración.</li>
+          <li>+30.000 personas participaron en 2023 en actividades de innovación.</li>
+          <li>11% de titulados al 1er año y 13% al 4to son emprendedores.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Cómo se desarrolla la innovación en las sedes?</h2>
+        <p>Se basa en un Modelo de Innovación con cuatro ejes:</p>
+        <ul>
+          <li>Cultura y Gestión</li>
+          <li>Desarrollo de Competencias</li>
+          <li>Iniciativas y Entornos</li>
+          <li>Transferencia y Adopción</li>
+        </ul>
+        <p>Impulsado por la Estrategia 2024–2030 con foco en sostenibilidad, formación, cultura y docentes innovadores.</p>
+      </div>
+      <img src="img/innovacion.png" alt="Innovacion en sedes" onclick="showImage(this)">
+    </div>
+
+    <div class="card">
+      <img src="img/sedes.png" alt="Desafios" style="width: 100%; height: auto; display: block;">
+      <div class="card-content">
+        <h2>Desafíos actuales en sede</h2>
+        <ul>
+          <li>Mejorar seguimiento y evaluación de proyectos</li>
+          <li>Ampliar cobertura de programas co-curriculares</li>
+          <li>Impulsar investigación aplicada en sede</li>
+          <li>Fortalecer articulación entre innovación, docencia y vinculación (ej. CAUCE, CPC-Inacap, CEDEM)</li>
+          <li>Sistematizar análisis y evaluación para retroalimentar la docencia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
