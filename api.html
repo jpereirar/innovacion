@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modelo API  INACAP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003A5C;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: #003A5C;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #003A5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 ratio */
+      overflow: hidden;
+      border-radius: 6px;
+      background: #000; /* para que no se vea en blanco */
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .inicio-link {
+      font-size: 1.5em; /* igual que h1 */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .inicio-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .hero-text {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .inicio-link {
+        font-size: 1em;
+        align-self: flex-end;
+        padding: 5px;
+      }
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+      .overlay.show {
+        display: flex;
+      }
+      .overlay-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 600px;
+        width: 80%;
+      }
+      .overlay img {
+        max-width: 100%;
+        max-height: 80vh; /* asegura que no sobrepase el alto visible */
+        height: auto;
+        object-fit: contain; /* mantiene proporciones sin recorte */
+        margin-bottom: 20px;
+      }     
+
+      .overlay h3 {
+        color: #003A5C;
+      }
+
+</style>
+</head>
+<body>
+
+  <script>
+    function showImage(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modalImg.src = img.src;
+      modal.classList.add("show");
+    }
+
+    function hideImage() {
+      const modal = document.getElementById("imageModal");
+      modal.classList.remove("show");
+    }
+  </script>
+
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <div class="hero-text">
+      <h1>Aprendizaje Integrado al Sector Productivo y de Servicios (API)</h1>
+      <p>Conectamos el aula con el mundo real para transformar entornos y trayectorias</p>
+    </div>
+    <a href="index.html" class="inicio-link">Inicio</a>
+  </header>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="img/api1.png" alt="Programas">
+      <div class="card-content">
+        <h2>Objetivo API</h2>
+        <p>La estrategia curricular API es desarrollada e implementada por la <strong>Vicerrectoría Académica de INACAP</strong>.  
+          Su objetivo es vincular de manera efectiva, ágil e innovadora a estudiantes de la educación superior y el mundo del trabajo, 
+          fortaleciendo la experiencia de integrar la teoría con la práctica y contribuyendo en la inserción de los estudiantes al mundo laboral.</p>
+  
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/apibeneficios.jpg" alt="Programas">
+      <div class="card-content">
+        <h2>Beneficios</h2>
+        <p>Formamos profesionales conectados con el mundo laboral, 
+          impulsando su desarrollo a través de experiencias reales que 
+          generan impacto en los territorios y sectores productivos. Nos enfocamos en:</p>
+          <ul>
+            <li>Vincular el aprendizaje con experiencias laborales reales.</li>
+            <li>Conectar tempranamente con el mundo del trabajo y sus necesidades.</li>
+            <li>Transferir valor a las organizaciones.</li>
+            <li>Fomentar la innovación y creatividad.</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/equipoapi.jpg" alt="Líneas de Trabajo" />
+      <div class="card-content">
+        <h2>Asignaturas API</h2>
+        <p>La estrategia curricular API se materializa en 3 tipos de asignaturas, en las que  se
+          integra el aprendizaje práctico y la innovación, desarrollando competencias clave a través de desafíos reales 
+          y metodologías activas y colaborativas: </p>
+        <ul>
+          <li><strong>Asignaturas I+E:</strong> desarrollan las habilidades de  innovación mediante el Aprendizaje Basado en Desafíos.</li>
+          <li><strong>Proyecto Integrado y Proyecto de Título:</strong> desarrollan las habilidades de  innovación mediante el 
+            Aprendizaje Basado en Proyectos.</li>
+            <li><strong>Asignaturas de especialidad:</strong> se fomenta el desarrollo del API tipo 2 o 3 en asignaturas de especialidad.</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es API Tipo 1?</h2>
+        <p>Los Proyectos/Desafíos son estructurados por las áreas académicas en sede central junto a una empresa, 
+          se utilizan como caso y se trabajan en aula con material instruccional (Tour Virtual).
+        </p>
+        <img src="img/apitipo1.png" alt="Api tipo 1" />
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es API Tipo 2?</h2>
+        <p>Los Proyectos/Desafíos son estructurados por las sedes en conjunto con las empresas u organizaciones locales. 
+          Se usa el mismo material instruccional de API 1.
+        </p>
+        <img src="img/apitipo2.png" alt="Líneas de Trabajo" />
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es API Tipo 3?</h2>
+        <p>Los estudiantes desarrollan una función específica en la empresa durante al menos 12 horas, 
+          cuentan con un maestro guía de la misma empresa quién los evalúa junto a docentes de INACAP.
+        </p>
+        <img src="img/apitipo3.png" alt="Líneas de Trabajo" />
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Resultados Destacables</h2>
+        
+        <p>Desde su instalación el año 2022, API se ha extendido a las 28 sedes de INACAP, con 
+          más de 700 docentes formados y participando en las asignaturas que usan esta estrategia, 
+          más de 3000 secciones incorporadas, y más de 70.000 estudiantes formados.
+        </p>
+        <img src="img/apiresultados.png" alt="Resultados" onclick="showImage(this)">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Quieres saber más?</h2>
+        <p>Escríbenos y co-creemos el futuro de la innovación. Cada sede INACAP tiene un equipo listo para apoyarte.</p>
+        <p><a href="mailto:cpereirah@inacap.cl">cpereirah@inacap.cl</a></p>
+        <img src="img/apiparticipa.png" alt="Participa">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- Modal para mostrar  imagen ampliada -->
+  <div class="overlay" id="imageModal" onclick="hideImage()">
+    <div class="overlay-content" onclick="event.stopPropagation();">
+      <img id="modalImage" src="" alt="Imagen ampliada">
+      <button class="close-btn" onclick="hideImage()">×</button>
+    </div>
+  </div>
+
+  <script>
+    function showImage(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modalImg.src = img.src;
+      modal.classList.add("show");
+    }
+  
+    function hideImage() {
+      document.getElementById("imageModal").classList.remove("show");
+    }
+  </script>
+
+</body>
+</html>
