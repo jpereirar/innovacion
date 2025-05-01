@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articulamos innovación, educación y entorno para formar agentes de cambio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003A5C;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: #003A5C;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #003A5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 ratio */
+      overflow: hidden;
+      border-radius: 6px;
+      background: #000; /* para que no se vea en blanco */
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .inicio-link {
+      font-size: 1.5em; /* igual que h1 */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .inicio-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .hero-text {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .inicio-link {
+        font-size: 1em;
+        align-self: flex-end;
+        padding: 5px;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <div class="hero-text">
+      <h1>Ejes del Modelo Educativo de INACAP</h1>
+      <p>Articulamos innovación, educación y entorno para formar agentes de cambio</p>
+    </div>
+    <a href="index.html" class="inicio-link">Inicio</a>
+  </header>
+
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-content">
+        <h2>Aprendizaje Integrado al Sector Productivo y de Servicios</h2>
+        <p>Se promueven experiencias de aprendizaje en contextos reales mediante la colaboración con empresas y organizaciones, 
+          integrando metodologías innovadoras que permiten abordar desafíos del entorno desde la formación, fortaleciendo así la 
+          pertinencia educativa y el vínculo con la realidad social y productiva.</p>
+          <img src="img/api1.png" alt="Programas">
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Desarrollo integral de la persona para el aprendizaje permanente</h2>
+        <p>Se impulsa el desarrollo personal y profesional continuo a través de acciones formativas conectadas con el entorno, 
+          formando personas con competencias emprendedoras e innovadoras capaces de adaptarse y generar valor sostenible en contextos cambiantes.</p>
+          <img src="img/alumnos.png" alt="Alumnos">
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Trayectorias formativo-laborales (TFL)</h2>
+        <p>Se articulan trayectorias educativas con las necesidades del entorno territorial, 
+          promoviendo la empleabilidad mediante experiencias pertinentes, enriquecidas por el uso de 
+          tecnologías e innovación institucional que fortalecen la inserción laboral y la productividad local.</p>
+          <iframe src="https://www.youtube.com/embed/jXPNhUWi_ho" title="TFL" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Compromiso con el desarrollo territorial</h2>
+        <p>Se desarrollan proyectos y soluciones innovadoras en colaboración con actores del entorno, 
+          respondiendo a desafíos sociales y productivos, y contribuyendo al desarrollo sostenible de regiones y 
+          comunidades a través de la transferencia de conocimiento y tecnología.</p>
+          <img src="img/alumnos2.png" alt="Alumnos2">
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Quieres saber más?</h2>
+        <p>Escríbenos y co-creemos el futuro de la innovación. Cada sede INACAP tiene un equipo listo para apoyarte.</p>
+        <p><a href="mailto:dite@inacap.cl">dite@inacap.cl</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
