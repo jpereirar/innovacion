@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CREA Empresas 2025 - INACAP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003A5C;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero {
+      background-color: #c8102e;
+      height: 300px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: #003A5C;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #003A5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 10px 10px;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.5rem; /* Espacio entre videos */
+    }
+
+    .video-wrapper {
+     position: relative;
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 1rem; /* Espaciado entre videos */
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      border: 0;
+    }
+
+    .inicio-link {
+      font-size: 1.5em; /* igual que h1 */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .inicio-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .hero-text {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .inicio-link {
+        font-size: 1em;
+        align-self: flex-end;
+        padding: 5px;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <div class="hero-text">
+      <h1>CREA Empresas 2025</h1>
+      <p>Transformamos tus ideas y soluciones en emprendimientos</p>
+    </div>
+    <a href="index.html" class="inicio-link">Inicio</a>
+  </header>
+
+
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es CREA Empresas?</h2>
+        <p>Red colaborativa de INACAP que impulsa el emprendimiento y la creación de empresas en 25 sedes a nivel nacional, conectando con actores como SERCOTEC.</p>
+      </div>
+      <img src="img/CEAI_gente.png" alt="CEAI_gente">
+      <img src="img_banco_inacap/iStock-970503926.jpg" alt="DITE" class="img24">
+      <!-- Instagram links -->
+      <div style="padding: 15px; display: flex; flex-direction: column; gap: 10px;">
+        <a href="https://www.instagram.com/creaempresasinacap_iquique/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+          </svg>
+          @creaempresas_iquique
+        </a>
+        <a href="https://www.instagram.com/creaempresas_rancagua/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+          </svg>
+          @creaempresas_rancagua
+        </a>
+
+        <a href="https://www.instagram.com/creaempresas_curico/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+          </svg>
+          @creaempresas_curico
+        </a>
+        <a href="https://www.instagram.com/creaempresas_chillan/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+          </svg>
+          @creaempresas_chillan
+        </a>
+         <a href="https://www.instagram.com/creaempresas_osorno/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #000;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E4405F" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+          </svg>
+          @creaempresas_osorno
+        </a>
+   </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Espacios</h2>
+        <p>Los espacios CREA Empresas están diseñados como entornos colaborativos que fomentan el desarrollo del emprendimiento a través de múltiples iniciativas. Su propósito es ofrecer a estudiantes, egresados y emprendedores un ecosistema de apoyo integral, que potencie sus ideas y negocios mediante:</p>
+        <ul>
+          <li>Coworking para desarrollar proyectos.</li>
+          <li>Capacitaciones en habilidades emprendedoras.</li>
+          <li>Redes con emprendedores y el ecosistema.</li>
+          <li>Información sobre financiamiento.</li>
+          <li>Mentorías personalizadas por etapas.</li>
+        </ul>
+      </div>
+      <img src="img/CEAI_espacio.png" alt="CEAI_espacio">
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Resultados 2022-2024</h2>
+        <ul>
+          <li>+50.000 participantes</li>
+          <li>2.000 mentorías realizadas</li>
+          <li>240 empresas formalizadas</li>
+        </ul>
+        <h2>Experiencias en sedes:</h2>   
+        <ul>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=ar8wJI6Df3w&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=9" target="_blank">Arica</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=eE0sCileOQ4&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=7" target="_blank">Iquique</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=oO2oPiPqu5M&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=3" target="_blank">Apoquindo</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=RfoPxzMYor4&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=2" target="_blank">Maipú</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=Pt285VWnaCM&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=10" target="_blank">Renca</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=t07AaA6P_gk&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=8" target="_blank"> Santiago Centro</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=VctekjMPtnk&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=12" target="_blank"> Puente Alto</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=uyRUWp5k_bM&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=1" target="_blank">Rancagua</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=zzuJrpjQIFY&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=4" target="_blank">Chillán</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=hghKq84MJ6M&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=6" target="_blank">San Pedro de la Paz</a></li>
+          <li><a class="video-link" href="https://www.youtube.com/watch?v=SuNEIpTpMlM&list=PL3EFFi1Jpv7vlHyZA7meiAhrriyYP0_kn&index=11" target="_blank">Temuco</a></li>
+        </ul>
+      </div>
+      <img src="img/CEAI_grupo.png" alt="CEAI_grupo">
+      <img src="img_banco_inacap/iStock-1007727030.jpg" alt="DITE" class="img25">
+
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Docente Coordinador</h2>
+        <p>Profesional responsable de la implementación del programa en su sede, apoyo a clubes estudiantiles, gestión de actividades y articulación con áreas como Fablab y Fábrica 4.0.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Mentorías</h2>
+        <p>Acompañamiento personalizado a estudiantes y emprendedores en todas las etapas del desarrollo de negocios. Cada ciclo contempla 6 horas de trabajo efectivo.</p>
+        <ul>
+          <li>Primer contacto</li>
+          <li>Diagnóstico</li>
+          <li>Plan de trabajo</li>
+          <li>Seguimiento</li>
+          <li>Evaluación</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Plataforma Online</h2>
+        <p>Accede a <a href="https://portal.inacap.cl/crea-empresas" target="_blank">www.redcreaempresasonline.cl</a> para reservar espacios, participar en actividades, y explorar recursos para emprender desde cualquier parte de Chile.</p>
+      </div>
+      <a href="https://portal.inacap.cl/crea-empresas" target="_blank">
+        <img src="img/CEAI.png" alt="CEAI_grupo">
+      </a>
+      </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Quieres participar?</h2>
+        <p>Escríbenos y co-creemos el futuro de la innovación tecnológica. Cada sede INACAP tiene un equipo listo para apoyarte.</p>
+        <p><a href="mailto:dite@inacap.cl">dite@inacap.cl</a></p>
+        <img src="img/participa.jpg" alt="Participa">
+        <img src="img_banco_inacap/FOTO 2.jpg" alt="DITE" class="img23">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
