@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovación en el Informe de Acreditación</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003A5C;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: #003A5C;
+    }
+
+    .card p, .card ul {
+      color: #111;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #003A5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 ratio */
+      overflow: hidden;
+      border-radius: 6px;
+      background: #000; /* para que no se vea en blanco */
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+
+   /* Estilo del modal (ventana emergente) */
+   .overlay {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay.show {
+      display: flex;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .overlay:hover {
+      cursor: pointer;
+    }
+
+    .inicio-link {
+      font-size: 1.5em; /* igual que h1 */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .inicio-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .hero-text {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .inicio-link {
+        font-size: 1em;
+        align-self: flex-end;
+        padding: 5px;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <!-- Modal para mostrar  imagen ampliada -->
+  <div class="overlay" id="imageModal" onclick="hideImage()">
+    <img id="modalImage" src="" alt="Imagen ampliada">
+  </div>
+  
+  <!-- Script para mostrar y ocultar -->
+  <script>
+    function showImage(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modalImg.src = img.src;
+      modal.classList.add("show");
+    }
+  
+    function hideImage() {
+      const modal = document.getElementById("imageModal");
+      modal.classList.remove("show");
+    }
+  </script>
+
+  <header>
+    <img src="img/inacap_logo.png" alt="Logo INACAP" />
+    <div class="hero-text">
+      <h1>Acreditación</h1>
+      <p>Innovación en INACAP y criterios de acreditación</p>
+    </div>
+    <a href="index.html" class="inicio-link">Inicio</a>
+  </header>
+
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-content">
+        <h2>¿Qué es la Innovación en INACAP?</h2>
+        <p>Las bases de este concepto.</p>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/cUVFbONHZSE" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Criterios de la CNA</h2>
+        <p>Criterio 15 y Criterio 16, lo que nos ocupa.</p>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/CiHO0lLuWgg" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <h2>Algo de contexto</h2>
+        <p>Revisemos los lineamientos institucionales.</p>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/1x-ulweCDJg" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+ 
+
+    <div class="card">
+      <div class="card-content">
+        <h2>Una introducción al criterio 15</h2>
+        <p>Revisamos áreas esenciales de la introducción del criterio 15.</p>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/yXvMkC87QSQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <p>&copy; 2025 INACAP - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
